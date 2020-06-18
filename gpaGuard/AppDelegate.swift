@@ -7,16 +7,61 @@
 //
 
 import UIKit
+import Amplify
+import AmplifyPlugins
+import FBSDKCoreKit
+import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate
+{
+	func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!)
+	{
+	  if let error = error
+	{
+		if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+		  print("The user has not signed in before or they have since signed out.")
+		} else {
+		  print("\(error.localizedDescription)")
+		}
+		return
+	  }
+	}
+	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+		
+		ApplicationDelegate.shared.application( application, didFinishLaunchingWithOptions: launchOptions)
+		
+		GIDSignIn.sharedInstance().clientID = "293065220737-1a2pu3qlchlk127agvgngr02f75ja2ed.apps.googleusercontent.com"
+		GIDSignIn.sharedInstance().delegate = self
+		
+		let apiPlugin = AWSAPIPlugin(modelRegistration: AmplifyModels())
+		let dataStorePlugin = AWSDataStorePlugin(modelRegistration: AmplifyModels())
+		do {
+		   try Amplify.add(plugin:apiPlugin)
+		   try Amplify.add(plugin:dataStorePlugin)
+		   try Amplify.configure()
+		   print("Initialized Amplify");
+		} catch {
+		   print("Could not initialize Amplify: \(error)")
+		}
+		
 		return true
 	}
+	
+	func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool
+	{
+		ApplicationDelegate.shared.application(
+			app,
+			open: url,
+			sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+			annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+		)
+		return GIDSignIn.sharedInstance().handle(url)
+
+	}
+	
 
 	// MARK: UISceneSession Lifecycle
 

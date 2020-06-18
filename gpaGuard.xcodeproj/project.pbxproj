@@ -3,18 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23E3E9D1614B44FCAE5F531D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B08AABB5FB4C90A3B80A26 /* User.swift */; };
+		55815E27249BEB2300D79BE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55815E26249BEB2300D79BE8 /* HomeViewController.swift */; };
+		55815E29249BEB5200D79BE8 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55815E28249BEB5200D79BE8 /* SignInViewController.swift */; };
+		55815E2B249BEB7300D79BE8 /* NewUserViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55815E2A249BEB7300D79BE8 /* NewUserViewControler.swift */; };
+		55815E2D249BEB9900D79BE8 /* ConfirmataionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55815E2C249BEB9900D79BE8 /* ConfirmataionViewController.swift */; };
+		55815E2F249BEBB500D79BE8 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55815E2E249BEBB500D79BE8 /* K.swift */; };
 		558301DE249ACAC200586057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558301DD249ACAC200586057 /* AppDelegate.swift */; };
 		558301E0249ACAC200586057 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558301DF249ACAC200586057 /* SceneDelegate.swift */; };
-		558301E2249ACAC200586057 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558301E1249ACAC200586057 /* ViewController.swift */; };
+		558301E2249ACAC200586057 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558301E1249ACAC200586057 /* WelcomeViewController.swift */; };
 		558301E5249ACAC200586057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558301E3249ACAC200586057 /* Main.storyboard */; };
 		558301E7249ACAC400586057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558301E6249ACAC400586057 /* Assets.xcassets */; };
 		558301EA249ACAC400586057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558301E8249ACAC400586057 /* LaunchScreen.storyboard */; };
 		558301F5249ACAC400586057 /* gpaGuardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558301F4249ACAC400586057 /* gpaGuardTests.swift */; };
 		55830200249ACAC400586057 /* gpaGuardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558301FF249ACAC400586057 /* gpaGuardUITests.swift */; };
+		6798EE8F411447CF98FDFF5E /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD40D8D63AB47A7A4105B09 /* AmplifyModels.swift */; };
+		76C5E4B6E93728FDF1150659 /* Pods_gpaGuard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1187893E42EAE8A7679938 /* Pods_gpaGuard.framework */; };
+		7832FBBE281F504296D8E5DC /* Pods_gpaGuardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39968FAAD7FC8BF17016FC29 /* Pods_gpaGuardTests.framework */; };
+		8AA51BFC546A0141C45A183D /* Pods_gpaGuard_gpaGuardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF319F1FB1572569E8E7F164 /* Pods_gpaGuard_gpaGuardUITests.framework */; };
+		8ABC43FCFE374DDD8266464C /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 98FBF2EEF6524D99B57200C1 /* amplifyconfiguration.json */; };
+		9DC8CB1ACC994E8898311094 /* User+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA986B2435C47F1B109240F /* User+Schema.swift */; };
+		A1EF541CA681426AA29749B2 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = E134B7FDEAAB4A799ABB468B /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +48,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03B08AABB5FB4C90A3B80A26 /* User.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = User.swift; path = amplify/generated/models/User.swift; sourceTree = "<group>"; };
+		05F3F9A31498EF021BFD7702 /* Pods-gpaGuard-gpaGuardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gpaGuard-gpaGuardUITests.debug.xcconfig"; path = "Target Support Files/Pods-gpaGuard-gpaGuardUITests/Pods-gpaGuard-gpaGuardUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		34A53180404B443BB26615FE /* amplifytools.xcconfig */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.xcconfig; path = amplifytools.xcconfig; sourceTree = "<group>"; };
+		39968FAAD7FC8BF17016FC29 /* Pods_gpaGuardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gpaGuardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EFD41B74594767D26A610E0 /* Pods-gpaGuard-gpaGuardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gpaGuard-gpaGuardUITests.release.xcconfig"; path = "Target Support Files/Pods-gpaGuard-gpaGuardUITests/Pods-gpaGuard-gpaGuardUITests.release.xcconfig"; sourceTree = "<group>"; };
+		55815E26249BEB2300D79BE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		55815E28249BEB5200D79BE8 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		55815E2A249BEB7300D79BE8 /* NewUserViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewControler.swift; sourceTree = "<group>"; };
+		55815E2C249BEB9900D79BE8 /* ConfirmataionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmataionViewController.swift; sourceTree = "<group>"; };
+		55815E2E249BEBB500D79BE8 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		558301DA249ACAC200586057 /* gpaGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gpaGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558301DD249ACAC200586057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		558301DF249ACAC200586057 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		558301E1249ACAC200586057 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		558301E1249ACAC200586057 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		558301E4249ACAC200586057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		558301E6249ACAC400586057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		558301E9249ACAC400586057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +72,17 @@
 		558301FB249ACAC400586057 /* gpaGuardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gpaGuardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		558301FF249ACAC400586057 /* gpaGuardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gpaGuardUITests.swift; sourceTree = "<group>"; };
 		55830201249ACAC400586057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67F54BEA7BC346DE63C5899B /* Pods-gpaGuardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gpaGuardTests.debug.xcconfig"; path = "Target Support Files/Pods-gpaGuardTests/Pods-gpaGuardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A3315A04971D2991A671FCD /* Pods-gpaGuardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gpaGuardTests.release.xcconfig"; path = "Target Support Files/Pods-gpaGuardTests/Pods-gpaGuardTests.release.xcconfig"; sourceTree = "<group>"; };
+		8FD40D8D63AB47A7A4105B09 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
+		98FBF2EEF6524D99B57200C1 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		A9435F6DFFD65B8BA45FF7D6 /* Pods-gpaGuard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gpaGuard.release.xcconfig"; path = "Target Support Files/Pods-gpaGuard/Pods-gpaGuard.release.xcconfig"; sourceTree = "<group>"; };
+		AC00034310194BCF912C33BF /* schema.graphql */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text; name = schema.graphql; path = amplify/backend/api/amplifyDatasource/schema.graphql; sourceTree = "<group>"; };
+		ADA986B2435C47F1B109240F /* User+Schema.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "User+Schema.swift"; path = "amplify/generated/models/User+Schema.swift"; sourceTree = "<group>"; };
+		B26D6DA1633680F2B4656148 /* Pods-gpaGuard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gpaGuard.debug.xcconfig"; path = "Target Support Files/Pods-gpaGuard/Pods-gpaGuard.debug.xcconfig"; sourceTree = "<group>"; };
+		DA1187893E42EAE8A7679938 /* Pods_gpaGuard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gpaGuard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF319F1FB1572569E8E7F164 /* Pods_gpaGuard_gpaGuardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gpaGuard_gpaGuardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E134B7FDEAAB4A799ABB468B /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = awsconfiguration.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C5E4B6E93728FDF1150659 /* Pods_gpaGuard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7832FBBE281F504296D8E5DC /* Pods_gpaGuardTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +106,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA51BFC546A0141C45A183D /* Pods_gpaGuard_gpaGuardUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FBA4F23B65BCCC39A5F8616 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B26D6DA1633680F2B4656148 /* Pods-gpaGuard.debug.xcconfig */,
+				A9435F6DFFD65B8BA45FF7D6 /* Pods-gpaGuard.release.xcconfig */,
+				05F3F9A31498EF021BFD7702 /* Pods-gpaGuard-gpaGuardUITests.debug.xcconfig */,
+				4EFD41B74594767D26A610E0 /* Pods-gpaGuard-gpaGuardUITests.release.xcconfig */,
+				67F54BEA7BC346DE63C5899B /* Pods-gpaGuardTests.debug.xcconfig */,
+				7A3315A04971D2991A671FCD /* Pods-gpaGuardTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		353CB700757A6183CC9A78A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA1187893E42EAE8A7679938 /* Pods_gpaGuard.framework */,
+				DF319F1FB1572569E8E7F164 /* Pods_gpaGuard_gpaGuardUITests.framework */,
+				39968FAAD7FC8BF17016FC29 /* Pods_gpaGuardTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55815E25249BCF0E00D79BE8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				558301E3249ACAC200586057 /* Main.storyboard */,
+				558301E1249ACAC200586057 /* WelcomeViewController.swift */,
+				55815E26249BEB2300D79BE8 /* HomeViewController.swift */,
+				55815E28249BEB5200D79BE8 /* SignInViewController.swift */,
+				55815E2A249BEB7300D79BE8 /* NewUserViewControler.swift */,
+				55815E2C249BEB9900D79BE8 /* ConfirmataionViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		558301D1249ACAC200586057 = {
 			isa = PBXGroup;
 			children = (
+				BB87BB296C65487A89711EAE /* AmplifyModels */,
+				F054B1B0D9534CA0879A7D6C /* AmplifyConfig */,
 				558301DC249ACAC200586057 /* gpaGuard */,
 				558301F3249ACAC400586057 /* gpaGuardTests */,
 				558301FE249ACAC400586057 /* gpaGuardUITests */,
 				558301DB249ACAC200586057 /* Products */,
+				1FBA4F23B65BCCC39A5F8616 /* Pods */,
+				353CB700757A6183CC9A78A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +176,13 @@
 		558301DC249ACAC200586057 /* gpaGuard */ = {
 			isa = PBXGroup;
 			children = (
+				55815E25249BCF0E00D79BE8 /* Views */,
 				558301DD249ACAC200586057 /* AppDelegate.swift */,
 				558301DF249ACAC200586057 /* SceneDelegate.swift */,
-				558301E1249ACAC200586057 /* ViewController.swift */,
-				558301E3249ACAC200586057 /* Main.storyboard */,
 				558301E6249ACAC400586057 /* Assets.xcassets */,
 				558301E8249ACAC400586057 /* LaunchScreen.storyboard */,
 				558301EB249ACAC400586057 /* Info.plist */,
+				55815E2E249BEBB500D79BE8 /* K.swift */,
 			);
 			path = gpaGuard;
 			sourceTree = "<group>";
@@ -128,6 +205,29 @@
 			path = gpaGuardUITests;
 			sourceTree = "<group>";
 		};
+		BB87BB296C65487A89711EAE /* AmplifyModels */ = {
+			isa = PBXGroup;
+			children = (
+				8FD40D8D63AB47A7A4105B09 /* AmplifyModels.swift */,
+				03B08AABB5FB4C90A3B80A26 /* User.swift */,
+				ADA986B2435C47F1B109240F /* User+Schema.swift */,
+			);
+			name = AmplifyModels;
+			path = .;
+			sourceTree = "<group>";
+		};
+		F054B1B0D9534CA0879A7D6C /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				34A53180404B443BB26615FE /* amplifytools.xcconfig */,
+				98FBF2EEF6524D99B57200C1 /* amplifyconfiguration.json */,
+				E134B7FDEAAB4A799ABB468B /* awsconfiguration.json */,
+				AC00034310194BCF912C33BF /* schema.graphql */,
+			);
+			name = AmplifyConfig;
+			path = .;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +235,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55830204249ACAC400586057 /* Build configuration list for PBXNativeTarget "gpaGuard" */;
 			buildPhases = (
+				48D5A75CD9D800DBA5F48D40 /* [CP] Check Pods Manifest.lock */,
+				557C28F4249ACC0E00E7C268 /* Run Amplify Tools */,
 				558301D6249ACAC200586057 /* Sources */,
 				558301D7249ACAC200586057 /* Frameworks */,
 				558301D8249ACAC200586057 /* Resources */,
+				BC0B8BD2647FF941CA454AA1 /* [CP] Embed Pods Frameworks */,
+				71651A069BC9749AEA4472A2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +256,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55830207249ACAC400586057 /* Build configuration list for PBXNativeTarget "gpaGuardTests" */;
 			buildPhases = (
+				040C01395094E3D5815C1D5B /* [CP] Check Pods Manifest.lock */,
 				558301EC249ACAC400586057 /* Sources */,
 				558301ED249ACAC400586057 /* Frameworks */,
 				558301EE249ACAC400586057 /* Resources */,
@@ -170,9 +275,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5583020A249ACAC400586057 /* Build configuration list for PBXNativeTarget "gpaGuardUITests" */;
 			buildPhases = (
+				59221480847151472BAC30C5 /* [CP] Check Pods Manifest.lock */,
 				558301F7249ACAC400586057 /* Sources */,
 				558301F8249ACAC400586057 /* Frameworks */,
 				558301F9249ACAC400586057 /* Resources */,
+				712FC9E03B5455997B2CB37D /* [CP] Embed Pods Frameworks */,
+				E75207E013FAFA99952F55E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +343,8 @@
 				558301EA249ACAC400586057 /* LaunchScreen.storyboard in Resources */,
 				558301E7249ACAC400586057 /* Assets.xcassets in Resources */,
 				558301E5249ACAC200586057 /* Main.storyboard in Resources */,
+				8ABC43FCFE374DDD8266464C /* amplifyconfiguration.json in Resources */,
+				A1EF541CA681426AA29749B2 /* awsconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +364,177 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		040C01395094E3D5815C1D5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gpaGuardTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48D5A75CD9D800DBA5F48D40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gpaGuard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		557C28F4249ACC0E00E7C268 /* Run Amplify Tools */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Amplify Tools";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/AmplifyTools/amplify-tools.sh\"\n";
+		};
+		59221480847151472BAC30C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gpaGuard-gpaGuardUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		712FC9E03B5455997B2CB37D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gpaGuard-gpaGuardUITests/Pods-gpaGuard-gpaGuardUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gpaGuard-gpaGuardUITests/Pods-gpaGuard-gpaGuardUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gpaGuard-gpaGuardUITests/Pods-gpaGuard-gpaGuardUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71651A069BC9749AEA4472A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gpaGuard/Pods-gpaGuard-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gpaGuard/Pods-gpaGuard-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gpaGuard/Pods-gpaGuard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC0B8BD2647FF941CA454AA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gpaGuard/Pods-gpaGuard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gpaGuard/Pods-gpaGuard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gpaGuard/Pods-gpaGuard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E75207E013FAFA99952F55E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gpaGuard-gpaGuardUITests/Pods-gpaGuard-gpaGuardUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gpaGuard-gpaGuardUITests/Pods-gpaGuard-gpaGuardUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gpaGuard-gpaGuardUITests/Pods-gpaGuard-gpaGuardUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		558301D6249ACAC200586057 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				558301E2249ACAC200586057 /* ViewController.swift in Sources */,
+				558301E2249ACAC200586057 /* WelcomeViewController.swift in Sources */,
 				558301DE249ACAC200586057 /* AppDelegate.swift in Sources */,
+				55815E2B249BEB7300D79BE8 /* NewUserViewControler.swift in Sources */,
 				558301E0249ACAC200586057 /* SceneDelegate.swift in Sources */,
+				6798EE8F411447CF98FDFF5E /* AmplifyModels.swift in Sources */,
+				55815E2D249BEB9900D79BE8 /* ConfirmataionViewController.swift in Sources */,
+				55815E2F249BEBB500D79BE8 /* K.swift in Sources */,
+				55815E29249BEB5200D79BE8 /* SignInViewController.swift in Sources */,
+				23E3E9D1614B44FCAE5F531D /* User.swift in Sources */,
+				55815E27249BEB2300D79BE8 /* HomeViewController.swift in Sources */,
+				9DC8CB1ACC994E8898311094 /* User+Schema.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +705,7 @@
 		};
 		55830205249ACAC400586057 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B26D6DA1633680F2B4656148 /* Pods-gpaGuard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +724,7 @@
 		};
 		55830206249ACAC400586057 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9435F6DFFD65B8BA45FF7D6 /* Pods-gpaGuard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +743,7 @@
 		};
 		55830208249ACAC400586057 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67F54BEA7BC346DE63C5899B /* Pods-gpaGuardTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +766,7 @@
 		};
 		55830209249ACAC400586057 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A3315A04971D2991A671FCD /* Pods-gpaGuardTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +789,7 @@
 		};
 		5583020B249ACAC400586057 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05F3F9A31498EF021BFD7702 /* Pods-gpaGuard-gpaGuardUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +810,7 @@
 		};
 		5583020C249ACAC400586057 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EFD41B74594767D26A610E0 /* Pods-gpaGuard-gpaGuardUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
