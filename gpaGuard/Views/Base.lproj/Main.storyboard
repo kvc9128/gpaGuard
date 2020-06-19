@@ -17,18 +17,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Be3-Sb-IV2">
-                                <rect key="frame" x="75" y="262.5" width="264" height="371"/>
+                                <rect key="frame" x="75" y="232.5" width="264" height="431"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="yfT-cV-juS">
                                         <rect key="frame" x="0.0" y="0.0" width="264" height="171"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yzk-2E-nBK" userLabel="LoginOptions">
-                                        <rect key="frame" x="0.0" y="201" width="264" height="170"/>
+                                        <rect key="frame" x="0.0" y="201" width="264" height="230"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EE-eK-01E">
                                                 <rect key="frame" x="0.0" y="0.0" width="264" height="50"/>
                                                 <color key="backgroundColor" red="0.60784313729999995" green="0.10980392160000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Sign In">
                                                     <color key="titleColor" name="Gold"/>
                                                 </state>
@@ -36,10 +36,12 @@
                                                     <segue destination="gNi-DT-rfO" kind="show" identifier="signInSegue" id="x4Z-Na-0uz"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1I-R5-nbz" customClass="FBSDKButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1I-R5-nbz" customClass="FBSDKLoginButton">
                                                 <rect key="frame" x="0.0" y="60" width="264" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="FBlogin"/>
                                                 <connections>
+                                                    <action selector="FacebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HmZ-nz-Ouq"/>
                                                     <segue destination="Bkb-BW-GsN" kind="show" identifier="socialLogin" id="Hz6-ZS-nOY"/>
                                                 </connections>
                                             </button>
@@ -47,6 +49,12 @@
                                                 <rect key="frame" x="0.0" y="120" width="264" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwx-X4-kus">
+                                                <rect key="frame" x="0.0" y="180" width="264" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.60784313729999995" green="0.10980392160000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -62,6 +70,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="h9I-GV-B67"/>
+                    <connections>
+                        <outlet property="FBloginButton" destination="a1I-R5-nbz" id="kmI-sC-x7N"/>
+                        <outlet property="infoLabel" destination="Fwx-X4-kus" id="YdW-og-miS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,13 +82,13 @@
         <!--HomeView-->
         <scene sceneID="eaf-xy-EOL">
             <objects>
-                <viewController id="Bkb-BW-GsN" userLabel="HomeView" sceneMemberID="viewController">
+                <viewController id="Bkb-BW-GsN" userLabel="HomeView" customClass="HomeViewController" customModule="gpaGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g76-kM-eUk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="XQ4-ar-CEX">
-                                <rect key="frame" x="140" y="437.5" width="94" height="77.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="XQ4-ar-CEX">
+                                <rect key="frame" x="160" y="409.5" width="94" height="77.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie8-Dq-daz">
                                         <rect key="frame" x="11.5" y="0.0" width="71" height="20.5"/>
@@ -91,14 +103,24 @@
                                         <state key="normal" title="Sign Out">
                                             <color key="titleColor" red="1" green="0.82745098039999998" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signOutFb:" destination="Bkb-BW-GsN" eventType="touchUpInside" id="OK3-36-60r"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" name="Beige"/>
+                        <constraints>
+                            <constraint firstItem="XQ4-ar-CEX" firstAttribute="centerX" secondItem="g76-kM-eUk" secondAttribute="centerX" id="WuF-a9-DSl"/>
+                            <constraint firstItem="XQ4-ar-CEX" firstAttribute="centerY" secondItem="g76-kM-eUk" secondAttribute="centerY" id="aCD-Nd-5f6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Or-CC-frK"/>
                     </view>
                     <navigationItem key="navigationItem" id="fRE-g6-0Ot"/>
+                    <connections>
+                        <outlet property="signoutFB" destination="g76-kM-eUk" id="D4E-4L-RDb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nkg-TN-R36" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,7 +129,7 @@
         <!--SignInView-->
         <scene sceneID="3z5-HF-FHq">
             <objects>
-                <viewController id="gNi-DT-rfO" userLabel="SignInView" sceneMemberID="viewController">
+                <viewController id="gNi-DT-rfO" userLabel="SignInView" customClass="SignInViewController" customModule="gpaGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ja-JO-AiX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,7 +205,7 @@
         <!--NewUserView-->
         <scene sceneID="XP1-UX-mKc">
             <objects>
-                <viewController id="QhJ-VM-tqZ" userLabel="NewUserView" sceneMemberID="viewController">
+                <viewController id="QhJ-VM-tqZ" userLabel="NewUserView" customClass="NewUserViewController" customModule="gpaGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g0a-l3-3f1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,7 +275,7 @@
         <!--ConfirmationView-->
         <scene sceneID="1bS-Z4-1FV">
             <objects>
-                <viewController id="CoA-Ic-vWa" userLabel="ConfirmationView" sceneMemberID="viewController">
+                <viewController id="CoA-Ic-vWa" userLabel="ConfirmationView" customClass="ConfirmationViewController" customModule="gpaGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Bv-lM-LPH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -261,7 +283,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="zho-84-3il">
                                 <rect key="frame" x="75" y="304" width="264" height="288"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Cogn Up Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4R-sF-Hyx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Sign Up Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4R-sF-Hyx">
                                         <rect key="frame" x="0.0" y="0.0" width="264" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" red="0.60784313729999995" green="0.10980392160000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

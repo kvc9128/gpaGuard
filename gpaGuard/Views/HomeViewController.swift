@@ -7,4 +7,21 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
+class HomeViewController: UIViewController
+{
+	@IBOutlet var signoutFB: UIView!
+	
+	override func viewDidLoad()
+	{
+		
+	}
+	
+	@IBAction func signOutFb(_ sender: Any)
+	{
+		LoginManager().logOut()
+		print("logged out")
+	}
+	
+}
