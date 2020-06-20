@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import GoogleSignIn
 
 class HomeViewController: UIViewController
 {
@@ -21,6 +22,7 @@ class HomeViewController: UIViewController
 	@IBAction func signOutFb(_ sender: Any)
 	{
 		LoginManager().logOut()
+		GIDSignIn.sharedInstance().signOut()
 		print("logged out")
 	}
 	

@@ -14,8 +14,25 @@ import Combine
 import GoogleSignIn
 import FBSDKLoginKit
 
-class WelcomeViewController: UIViewController
+class WelcomeViewController: UIViewController, GIDSignInDelegate
 {
+	func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!)
+	{
+		if let error = error
+		{
+			print("There was an error logging in: \(error)")
+		}
+		else
+		{
+			if let username = user.profile.name
+			{
+				let newUser = createUser(username: username, email: nil, password: nil)
+				savedata(user: newUser)
+				self.performSegue(withIdentifier: K.socialSignInSegue, sender: self)
+			}
+        }
+	}
+	
 	
 	var userSubscription: AnyCancellable?
 	
@@ -23,22 +40,23 @@ class WelcomeViewController: UIViewController
 	override func viewDidLoad()
 	{
 		super.viewDidLoad()
-		
-		
+		GIDSignIn.sharedInstance()?.delegate = self
 		if let token = AccessToken.current, !token.isExpired
 			{
 				getFBUserData()
 				self.performSegue(withIdentifier: K.socialSignInSegue, sender: self)
 		    }
 		
-		// Do any additional setup after loading the view.
-		//LoginManager().logOut()
-//		GIDSignIn.sharedInstance()?.presentingViewController = self
-//		// Automatically sign in the user.
-//		GIDSignIn.sharedInstance()?.restorePreviousSignIn()
-			//
+		GIDSignIn.sharedInstance()?.presentingViewController = self
+		GIDSignIn.sharedInstance()?.restorePreviousSignIn()
 		
 	}
+	
+	@IBAction func googleSignin(_ sender: Any)
+	{
+		self.performSegue(withIdentifier: K.socialSignInSegue, sender: self)
+	}
+	
 	
 	@IBOutlet weak var FBloginButton: FBLoginButton!
 	
@@ -84,8 +102,6 @@ class WelcomeViewController: UIViewController
 	*/
 	func savedata(user: User)
 	{
-		print("DSKJCNDSJBV")
-		print("username, email: ", user.username, user.email ?? "email not found")
 		Amplify.DataStore.save(user) { (result) in
 		switch(result)
 		{

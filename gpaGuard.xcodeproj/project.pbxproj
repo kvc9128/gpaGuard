@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		23E3E9D1614B44FCAE5F531D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B08AABB5FB4C90A3B80A26 /* User.swift */; };
 		55815E27249BEB2300D79BE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55815E26249BEB2300D79BE8 /* HomeViewController.swift */; };
-		55815E29249BEB5200D79BE8 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55815E28249BEB5200D79BE8 /* SignInViewController.swift */; };
-		55815E2B249BEB7300D79BE8 /* NewUserViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55815E2A249BEB7300D79BE8 /* NewUserViewControler.swift */; };
-		55815E2D249BEB9900D79BE8 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55815E2C249BEB9900D79BE8 /* ConfirmationViewController.swift */; };
 		55815E2F249BEBB500D79BE8 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55815E2E249BEBB500D79BE8 /* K.swift */; };
 		558301DE249ACAC200586057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558301DD249ACAC200586057 /* AppDelegate.swift */; };
 		558301E0249ACAC200586057 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558301DF249ACAC200586057 /* SceneDelegate.swift */; };
@@ -21,6 +18,7 @@
 		558301EA249ACAC400586057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558301E8249ACAC400586057 /* LaunchScreen.storyboard */; };
 		558301F5249ACAC400586057 /* gpaGuardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558301F4249ACAC400586057 /* gpaGuardTests.swift */; };
 		55830200249ACAC400586057 /* gpaGuardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558301FF249ACAC400586057 /* gpaGuardUITests.swift */; };
+		55D296AA249D485000E32192 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55D296A9249D485000E32192 /* credentials.plist */; };
 		6798EE8F411447CF98FDFF5E /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD40D8D63AB47A7A4105B09 /* AmplifyModels.swift */; };
 		76C5E4B6E93728FDF1150659 /* Pods_gpaGuard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1187893E42EAE8A7679938 /* Pods_gpaGuard.framework */; };
 		7832FBBE281F504296D8E5DC /* Pods_gpaGuardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39968FAAD7FC8BF17016FC29 /* Pods_gpaGuardTests.framework */; };
@@ -54,9 +52,6 @@
 		39968FAAD7FC8BF17016FC29 /* Pods_gpaGuardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gpaGuardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EFD41B74594767D26A610E0 /* Pods-gpaGuard-gpaGuardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gpaGuard-gpaGuardUITests.release.xcconfig"; path = "Target Support Files/Pods-gpaGuard-gpaGuardUITests/Pods-gpaGuard-gpaGuardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		55815E26249BEB2300D79BE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		55815E28249BEB5200D79BE8 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		55815E2A249BEB7300D79BE8 /* NewUserViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewControler.swift; sourceTree = "<group>"; };
-		55815E2C249BEB9900D79BE8 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		55815E2E249BEBB500D79BE8 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		558301DA249ACAC200586057 /* gpaGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gpaGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558301DD249ACAC200586057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +67,7 @@
 		558301FB249ACAC400586057 /* gpaGuardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gpaGuardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		558301FF249ACAC400586057 /* gpaGuardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gpaGuardUITests.swift; sourceTree = "<group>"; };
 		55830201249ACAC400586057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D296A9249D485000E32192 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = credentials.plist; path = ../../Downloads/credentials.plist; sourceTree = "<group>"; };
 		67F54BEA7BC346DE63C5899B /* Pods-gpaGuardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gpaGuardTests.debug.xcconfig"; path = "Target Support Files/Pods-gpaGuardTests/Pods-gpaGuardTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A3315A04971D2991A671FCD /* Pods-gpaGuardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gpaGuardTests.release.xcconfig"; path = "Target Support Files/Pods-gpaGuardTests/Pods-gpaGuardTests.release.xcconfig"; sourceTree = "<group>"; };
 		8FD40D8D63AB47A7A4105B09 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
@@ -142,9 +138,6 @@
 				558301E3249ACAC200586057 /* Main.storyboard */,
 				558301E1249ACAC200586057 /* WelcomeViewController.swift */,
 				55815E26249BEB2300D79BE8 /* HomeViewController.swift */,
-				55815E28249BEB5200D79BE8 /* SignInViewController.swift */,
-				55815E2A249BEB7300D79BE8 /* NewUserViewControler.swift */,
-				55815E2C249BEB9900D79BE8 /* ConfirmationViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +145,7 @@
 		558301D1249ACAC200586057 = {
 			isa = PBXGroup;
 			children = (
+				55D296A9249D485000E32192 /* credentials.plist */,
 				BB87BB296C65487A89711EAE /* AmplifyModels */,
 				F054B1B0D9534CA0879A7D6C /* AmplifyConfig */,
 				558301DC249ACAC200586057 /* gpaGuard */,
@@ -341,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				558301EA249ACAC400586057 /* LaunchScreen.storyboard in Resources */,
+				55D296AA249D485000E32192 /* credentials.plist in Resources */,
 				558301E7249ACAC400586057 /* Assets.xcassets in Resources */,
 				558301E5249ACAC200586057 /* Main.storyboard in Resources */,
 				8ABC43FCFE374DDD8266464C /* amplifyconfiguration.json in Resources */,
@@ -526,12 +521,9 @@
 			files = (
 				558301E2249ACAC200586057 /* WelcomeViewController.swift in Sources */,
 				558301DE249ACAC200586057 /* AppDelegate.swift in Sources */,
-				55815E2B249BEB7300D79BE8 /* NewUserViewControler.swift in Sources */,
 				558301E0249ACAC200586057 /* SceneDelegate.swift in Sources */,
 				6798EE8F411447CF98FDFF5E /* AmplifyModels.swift in Sources */,
-				55815E2D249BEB9900D79BE8 /* ConfirmationViewController.swift in Sources */,
 				55815E2F249BEBB500D79BE8 /* K.swift in Sources */,
-				55815E29249BEB5200D79BE8 /* SignInViewController.swift in Sources */,
 				23E3E9D1614B44FCAE5F531D /* User.swift in Sources */,
 				55815E27249BEB2300D79BE8 /* HomeViewController.swift in Sources */,
 				9DC8CB1ACC994E8898311094 /* User+Schema.swift in Sources */,
