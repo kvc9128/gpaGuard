@@ -16,53 +16,14 @@ import FBSDKLoginKit
 
 class WelcomeViewController: UIViewController, GIDSignInDelegate
 {
-	func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!)
-	{
-		if let error = error
-		{
-			print("There was an error logging in: \(error)")
-		}
-		else
-		{
-			if let username = user.profile.name
-			{
-				let newUser = createUser(username: username, email: nil, password: nil)
-				savedata(user: newUser)
-				self.performSegue(withIdentifier: K.socialSignInSegue, sender: self)
-			}
-        }
-	}
-	
-	
-	var userSubscription: AnyCancellable?
-	
-	@IBOutlet weak var infoLabel: UILabel!
-	override func viewDidLoad()
-	{
-		super.viewDidLoad()
-		GIDSignIn.sharedInstance()?.delegate = self
-		if let token = AccessToken.current, !token.isExpired
-			{
-				getFBUserData()
-				self.performSegue(withIdentifier: K.socialSignInSegue, sender: self)
-		    }
-		
-		GIDSignIn.sharedInstance()?.presentingViewController = self
-		GIDSignIn.sharedInstance()?.restorePreviousSignIn()
-		
-	}
-	
-	@IBAction func googleSignin(_ sender: Any)
-	{
-		self.performSegue(withIdentifier: K.socialSignInSegue, sender: self)
-	}
-	
 	
 	@IBOutlet weak var FBloginButton: FBLoginButton!
-	
+
 	
 	// MARK: User Model data activities
-	func subscribeTodos()
+	var userSubscription: AnyCancellable?
+	
+	func subscribeUsers()
 	{
 	   self.userSubscription = Amplify.DataStore.publisher(for: User.self)
 			   .sink(receiveCompletion: { completion in
@@ -102,14 +63,31 @@ class WelcomeViewController: UIViewController, GIDSignInDelegate
 	*/
 	func savedata(user: User)
 	{
+		print(user)
 		Amplify.DataStore.save(user) { (result) in
-		switch(result)
-		{
-		case .success(let savedUser):
-			print("Updated item: \(savedUser.username )")
-		case .failure(let error):
-			print("Could not update data in Datastore: \(error)")
+			switch(result)
+			{
+			case .success(let user):
+				print("Succesfully created user: \(user)")
+			case .failure(let error):
+				print("Error occurred and unable to create user: \(error)")
+			}
 		}
+		
+		
+		
+		_ = Amplify.API.mutate(request: .create(user)) { event in
+			switch event {
+			case .success(let result):
+				switch result {
+				case .success(let user):
+					print("Successfully created todo: \(user)")
+				case .failure(let error):
+					print("Got failed result with \(error.errorDescription)")
+				}
+			case .failure(let error):
+				print("Got failed event with error \(error)")
+			}
 		}
 	}
 
@@ -174,48 +152,150 @@ class WelcomeViewController: UIViewController, GIDSignInDelegate
 	*/
 	func deleteUser(username: String)
 	{
+		
 		Amplify.DataStore.query(User.self, where: User.keys.username.eq(username)) { (result) in
 			switch(result)
 			{
 			case .success(let users):
-				guard users.count == 1, let toDeleteUser = users.first else {
-					print("Did not find exactly one todo, bailing")
-					return
-				}
-				Amplify.DataStore.delete(toDeleteUser) { (result) in
-					switch(result) {
-					case .success:
-						print("Deleted item: \(toDeleteUser.username)")
-					case .failure(let error):
-						print("Could not update data in Datastore: \(error)")
+				for user in users
+				{
+					Amplify.DataStore.delete(user) { (result) in
+						switch(result) {
+						case .success:
+							print("Deleted item: \(user.username)")
+						case .failure(let error):
+							print("Could not update data in Datastore: \(error)")
+						}
 					}
+
 				}
-			case .failure(let error):
+				case .failure(let error):
 				print("Could not query DataStore: \(error)")
 			}
 		}
+	}
+	
+	func clearDatabase()
+	{
+		Amplify.DataStore.query(User.self) { (result) in
+			switch(result)
+			{
+			case .success(let users):
+				for user in users
+				{
+					deleteUser(username: user.username)
+				}
+			case .failure(let error):
+				print("Could not query items from datastore: \(error)")
+			}
+		}
+	}
+	
+	func doesUserExist(username: String) -> Bool
+	{
+		
+		let user = User.keys
+		let predicate = user.username == username
+		var flag:Bool = true
+		Amplify.DataStore.query(User.self, where: predicate) { result in
+			switch (result)
+			{
+			case .success(let users):
+					print("users asdf", users)
+					if users.count != 0
+					{
+						print("User exists in database, true")
+						flag = true
+					}
+					else{
+						print("User does not exist in databaase, false")
+						flag = false
+					}
+			case .failure(let error):
+				print("Error occurred retrieveing the data from servers: \(error)")
+			}
+		}
+		return flag
+	}
+	
+	override func viewDidLoad()
+	{
+		super.viewDidLoad()
+		subscribeUsers()
+		print("Retrieved data here: ")
 		retrieveData()
+		// setting up google sign in delegate, allowing auto sign in if previously signed in and setting presenting view controller
+		GIDSignIn.sharedInstance()?.delegate = self
+		GIDSignIn.sharedInstance()?.presentingViewController = self
+		GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+		
+		// Checking if a facebook user has logged in and if so log them in directly
+		if let token = AccessToken.current, !token.isExpired
+			{
+				getFBUserData()
+				self.performSegue(withIdentifier: K.socialSignInSegue, sender: self)
+		    }
+		retrieveData()
+	}
+	
+	
+	func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!)
+	{
+		if let error = error
+		{
+			print("There was an error logging in: \(error)")
+		}
+		else
+		{
+			if let username = user.profile.name, let email = user.profile.email
+			{
+				if !doesUserExist(username: username)
+				{
+					let newUser = createUser(username: username, email: email, password: nil)
+					savedata(user: newUser)
+				}
+				self.performSegue(withIdentifier: K.socialSignInSegue, sender: self)
+			}
+			else if let username = user.profile.name
+			{
+				if !doesUserExist(username: username)
+				{
+					print("Creating and saving users")
+					let newUser = createUser(username: username, email: nil, password: nil)
+					savedata(user: newUser)
+				}
+				self.performSegue(withIdentifier: K.socialSignInSegue, sender: self)
+			}
+        }
+	}
+	
+	@IBAction func googleSignin(_ sender: Any)
+	{
+		self.performSegue(withIdentifier: K.socialSignInSegue, sender: self)
 	}
 	
 	@IBAction func FacebookLogin(_ sender: FBLoginButton)
 	{
-
+		/*
+			Facebook login flow is a little different. It needs you to login first, then quit the app, then open the app again for data to be stored to database
+		*/
 	}
 	
-	func getFBUserData() {
-		 //which if my function to get facebook user details
-		 if((AccessToken.current) != nil){
-			 
+	func getFBUserData()
+	{
+//		 which if my function to get facebook user details
+		 if((AccessToken.current) != nil)
+		{
 			 GraphRequest(graphPath: "me", parameters: ["fields": "id, name, email"]).start(completionHandler: { (connection, result, error) -> Void in
 				 if (error == nil){
-					 
+
 					 let dict = result as! [String : AnyObject]
 					 print(result!)
 					 print(dict)
 					 let picutreDic = dict as NSDictionary
-					 
+
 					 let nameOfUser = picutreDic.object(forKey: "name") as! String
-					 
+
 					 var tmpEmailAdd = ""
 					 if let emailAddress = picutreDic.object(forKey: "email")
 					 {
@@ -229,8 +309,11 @@ class WelcomeViewController: UIViewController, GIDSignInDelegate
 					 }
 					print("Name of User: ", nameOfUser)
 					print("Email of User: ", tmpEmailAdd)
-					let newUser = self.createUser(username: nameOfUser, email: tmpEmailAdd, password: nil)
-					self.savedata(user: newUser)
+					if !self.doesUserExist(username: nameOfUser)
+					{
+						let newUser = self.createUser(username: nameOfUser, email: tmpEmailAdd, password: nil)
+						self.savedata(user: newUser)
+					}
 				 }
 				else
 				{

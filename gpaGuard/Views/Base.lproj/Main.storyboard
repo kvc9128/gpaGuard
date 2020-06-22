@@ -25,7 +25,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1I-R5-nbz" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="75" y="573.5" width="264" height="60"/>
+                                <rect key="frame" x="75" y="598.5" width="264" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="264" id="8Jc-Xx-Ms2"/>
                                     <constraint firstAttribute="height" constant="60" id="9yk-Ut-bje"/>
@@ -53,7 +53,7 @@
                             <constraint firstItem="5mL-d2-0VL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="1G2-Dx-2Jl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5mL-d2-0VL" secondAttribute="trailing" constant="75" id="43t-Qq-7m6"/>
                             <constraint firstItem="5mL-d2-0VL" firstAttribute="top" secondItem="Be3-Sb-IV2" secondAttribute="bottom" constant="30" id="8gK-mh-XIg"/>
-                            <constraint firstItem="a1I-R5-nbz" firstAttribute="top" secondItem="5mL-d2-0VL" secondAttribute="bottom" constant="25" id="aQZ-TI-4ld"/>
+                            <constraint firstItem="a1I-R5-nbz" firstAttribute="top" secondItem="5mL-d2-0VL" secondAttribute="bottom" constant="50" id="aQZ-TI-4ld"/>
                             <constraint firstItem="Be3-Sb-IV2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g1F-Ou-iph"/>
                             <constraint firstItem="a1I-R5-nbz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="uWK-I8-c4F"/>
                             <constraint firstItem="Be3-Sb-IV2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-75" id="yYx-rK-HHu"/>
