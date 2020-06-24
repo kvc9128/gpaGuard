@@ -26,6 +26,12 @@
 		8ABC43FCFE374DDD8266464C /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 98FBF2EEF6524D99B57200C1 /* amplifyconfiguration.json */; };
 		9DC8CB1ACC994E8898311094 /* User+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA986B2435C47F1B109240F /* User+Schema.swift */; };
 		A1EF541CA681426AA29749B2 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = E134B7FDEAAB4A799ABB468B /* awsconfiguration.json */; };
+		F3F9E2E089334F8584197001 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20999C7F81EF45458D8ED86E /* Request.swift */; };
+		0AA615F027C348C6A414BBF8 /* Request+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49878E75FD004FAB8B2FB33F /* Request+Schema.swift */; };
+		EA0D5142A7574F4CACBEBBB3 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6CEB561E6941838C869D2E /* Student.swift */; };
+		A652416050AD4D168EC0BC87 /* Student+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8426EBF0B54E5D95943134 /* Student+Schema.swift */; };
+		8316DD7AB5DF463CB0A9DBC1 /* Tutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E03BB6CB9AA414180EB4552 /* Tutor.swift */; };
+		A60494CED0734AB08F1333E5 /* Tutor+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C5FFA8B2A54A278D440DE8 /* Tutor+Schema.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +85,12 @@
 		DA1187893E42EAE8A7679938 /* Pods_gpaGuard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gpaGuard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF319F1FB1572569E8E7F164 /* Pods_gpaGuard_gpaGuardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gpaGuard_gpaGuardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E134B7FDEAAB4A799ABB468B /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = awsconfiguration.json; sourceTree = "<group>"; };
+		20999C7F81EF45458D8ED86E /* Request.swift */ = {isa = PBXFileReference; name = "Request.swift"; path = "amplify/generated/models/Request.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		49878E75FD004FAB8B2FB33F /* Request+Schema.swift */ = {isa = PBXFileReference; name = "Request+Schema.swift"; path = "amplify/generated/models/Request+Schema.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		1C6CEB561E6941838C869D2E /* Student.swift */ = {isa = PBXFileReference; name = "Student.swift"; path = "amplify/generated/models/Student.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		DC8426EBF0B54E5D95943134 /* Student+Schema.swift */ = {isa = PBXFileReference; name = "Student+Schema.swift"; path = "amplify/generated/models/Student+Schema.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		5E03BB6CB9AA414180EB4552 /* Tutor.swift */ = {isa = PBXFileReference; name = "Tutor.swift"; path = "amplify/generated/models/Tutor.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		F0C5FFA8B2A54A278D440DE8 /* Tutor+Schema.swift */ = {isa = PBXFileReference; name = "Tutor+Schema.swift"; path = "amplify/generated/models/Tutor+Schema.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +217,12 @@
 				8FD40D8D63AB47A7A4105B09 /* AmplifyModels.swift */,
 				03B08AABB5FB4C90A3B80A26 /* User.swift */,
 				ADA986B2435C47F1B109240F /* User+Schema.swift */,
+				20999C7F81EF45458D8ED86E /* Request.swift */,
+				49878E75FD004FAB8B2FB33F /* Request+Schema.swift */,
+				1C6CEB561E6941838C869D2E /* Student.swift */,
+				DC8426EBF0B54E5D95943134 /* Student+Schema.swift */,
+				5E03BB6CB9AA414180EB4552 /* Tutor.swift */,
+				F0C5FFA8B2A54A278D440DE8 /* Tutor+Schema.swift */,
 			);
 			name = AmplifyModels;
 			path = .;
@@ -220,6 +238,14 @@
 			);
 			name = AmplifyConfig;
 			path = .;
+			sourceTree = "<group>";
+		};
+		E20608496D3248CD8F7B010C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			path = undefined;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -527,6 +553,12 @@
 				23E3E9D1614B44FCAE5F531D /* User.swift in Sources */,
 				55815E27249BEB2300D79BE8 /* HomeViewController.swift in Sources */,
 				9DC8CB1ACC994E8898311094 /* User+Schema.swift in Sources */,
+				F3F9E2E089334F8584197001 /* Request.swift in Sources */,
+				0AA615F027C348C6A414BBF8 /* Request+Schema.swift in Sources */,
+				EA0D5142A7574F4CACBEBBB3 /* Student.swift in Sources */,
+				A652416050AD4D168EC0BC87 /* Student+Schema.swift in Sources */,
+				8316DD7AB5DF463CB0A9DBC1 /* Tutor.swift in Sources */,
+				A60494CED0734AB08F1333E5 /* Tutor+Schema.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

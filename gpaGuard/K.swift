@@ -16,4 +16,7 @@ struct K
 	static let confirmNewUserSegue = "confirmationSegue"
 	static let succesfulSignInSegue = "succesfulSignIn"
 	static let confirmedSignUpSegue = "confirmedSignUp"
+	
+	static let studySegue = "studySegue"
+	static let tutorSegue = "tutorSegue"
 }

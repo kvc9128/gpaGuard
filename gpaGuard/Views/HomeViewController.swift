@@ -26,4 +26,20 @@ class HomeViewController: UIViewController
 		print("logged out")
 	}
 	
+	
+	@IBAction func studyButtonPressed(_ sender: Any)
+	{
+		//Perform database entry operations here such as adding user to student database
+		
+		// segue
+		//self.performSegue(withIdentifier: K.studySegue, sender: self)
+	}
+	
+	@IBAction func tutorButtonPressed(_ sender: Any)
+	{
+		//Perform database entry operations here such as adding user to tutor database
+		
+		// segue
+		//self.performSegue(withIdentifier: K.tutorSegue, sender: self)
+	}
 }
